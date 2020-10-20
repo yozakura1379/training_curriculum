@@ -9,10 +9,12 @@
 </div>
 <div>
   <div class=calendar>
-    <% @week_days.each do |day| %>
+    <% @week_days.each do |day|  %> 
+    <%#この中にコントロールーrbの@week_daysが入っている、それをこの式の中だけブロック変数dayに変えている  %>
       <div class='item'>
         <div class='date'>
-          <%= day[:month] %>/<%= day[:date] %>
+          <%= day[:month] %>/<%= day[:date] %><%= day[:wday]%>
+          <%# @week_daysの中からそれぞれの科目を取り出している %>
         </div>
         <ul class='content'>
         <% if day[:plans].length != 0 %>
