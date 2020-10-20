@@ -15,7 +15,7 @@ class CalendarsController < ApplicationController
   private
 
   def plan_params
-    params.require(:plan).permit(:date, :plan)
+    params.require(:Calendars).permit(:date, :plan)
   end
 
   def get_Week
@@ -44,8 +44,7 @@ class CalendarsController < ApplicationController
          wday_num
       end
 
-      days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans, wday: wdays[wday_num]}
-      #deaysのなかに各計算式が配列として入っている
+      days = { :month => (@todays_date + x).month, :date => (@todays_date+x).day, :plans => today_plans}      #deaysのなかに各計算式が配列として入っている
 
       @week_days.push(days)
       #@week_daysにdaysの計算式を入れた   
