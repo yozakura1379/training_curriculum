@@ -46,7 +46,7 @@ class CalendarsController < ApplicationController
       days = { month: (@todays_date + x).month, date: (@todays_date+x).day, plans: today_plans, wday: wdays[wday_num]}
       #deaysのなかに各計算式が配列として入っている
       @week_days.push(days)
-      #@week_daysにdaysの計算式を入れた
+      #@week_daysにdaysの計算式を入れた   
     end
 
   end
