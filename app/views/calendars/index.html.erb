@@ -1,4 +1,3 @@
-<div class=body>
   <%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
     <%= f.label :日付を選択, class: 'lavel' %>
     <%= f.date_field :date, class: 'date-select' %>
@@ -13,7 +12,6 @@
     <%#この中にコントロールーrbの@week_daysが入っている、それをこの式の中だけブロック変数dayに変えている     %>
       <div class='item'>
         <div class='date'>
-
           <%= day[:month] %>/<%= day[:date] %><%= day[:wday]%>
           <%# @week_daysの中からそれぞれの科目を取り出している %>
         </div>
@@ -25,8 +23,6 @@
           <% end %>
         <% end %>
         </ul>
-       </div>
       </div>
     <% end %>
   </div>
-</div>
